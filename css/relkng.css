@@ -1,0 +1,28 @@
+body,
+label,
+input.input--xxlarge{
+	font-size: 20px !important;
+	line-height: 26px;
+}
+
+.container-fluid{
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.row-fluid{
+    height: 100%;
+}
+.span8{
+    height: 100%;
+    background: silver;
+}
+.span8 .form{
+    margin: 20px;
+}
+.span4 ul{
+	margin: 20px;
+}
+.help-inline{
+	font-size: 11px;
+}

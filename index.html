@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>re.lkng.me</title>
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="css/relkng.css" rel="stylesheet">
     </head>
     <body>
-        <div class="well" style="width: 300px; margin: 200px auto;text-align:center;">
-            <p class="lead">re.lkng.me</p>
-            <em>a regex tester</em>
+        <section class="container-fluid">
+        <div class="row-fluid">
+        <div class="span8">
+            <form class="form">
+                <fieldset>
+                    <div class="control-group">
+                        <label for="regex_input">Regular expression</label>
+                        <input id="regex_input" class="input-xxlarge" type="text" name="regex_input" value="lkng" />
+                        <p class="help-inline"></p>
+                    </div>
+                    <div class="control-group">
+                        <label for="text_input">Search in</label>
+                        <textarea id="text_input" class="input-xxlarge" name="text_input">re.lkng.me</textarea>
+                    </div>
+                </fieldset>
+            </form>
         </div>
+        <div id="results" class="span4"><ul class="unstyled"></ul></div>
+        </div>
+        </section>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/relkng.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                re = new RE($('#regex_input'), $('#text_input'));
+            });
+        </script>
     </body>
 </html>
+
